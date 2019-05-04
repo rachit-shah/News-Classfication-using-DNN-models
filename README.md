@@ -7,6 +7,8 @@ Team Members:
 
 - Sourabh Sandanshi (ssandan)
 
+[You can find the screencast of the presentation here.](https://drive.google.com/file/d/1PzghKuV0vGEa602jNGYQil0UhcRVTn_q/view?usp=sharing)
+
 ## How to Run
 You can run the IPython Notebooks in the folders "Dataset - 1" and "Dataset -2" by either downloading on your local machine or using the "Open in Colab" link to run the notebooks on Google Colab. To run the notebooks you will need the [dataset zip file](http://mlg.ucd.ie/datasets/bbc.html), the [glove embedding zip file](http://nlp.stanford.edu/data/glove.6B.zip) and the model weights too if you want to replicate our results. You can find all these files in the [Google Drive folder](https://drive.google.com/drive/folders/15A2b8uNEfak_1Gfh-c85dTtOHJrfrk7h?usp=sharing). Add all the files in this link to your google drive (root folder) in order to run the notebooks.
 
@@ -74,9 +76,9 @@ As you can see in the above tables, we have done hyperparameter tuning for the f
 ### CNN (Dataset1 on first row and Dataset 2 on second row)
 ![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/CNN-Accuracy.png) ![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/CNN-Loss.png) ![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%202/Plots/CNN-d2-Accuracy.png) ![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%202/Plots/CNN-d2-Loss.png)
 ### RNN (Dataset1 on first row and Dataset 2 on second row)
-[](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/RNN-Accuracy.png)[](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/RNN-Loss.png)[](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/RNN-Accuracy.png)[](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%202/Plots/RNN-d2-Loss.png)
+![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/RNN-Accuracy.png) ![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/RNN-Loss.png)![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/RNN-Accuracy.png)![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%202/Plots/RNN-d2-Loss.png)
 ### HAN (Dataset1 on first row and Dataset 2 on second row)
-[](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/HAN-Accuracy.png)[](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/HAN-Loss.png)[](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%202/Plots/HAN-d2-Accuracy.png)[](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%202/Plots/HAN-d2-Loss.png)
+![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/HAN-Accuracy.png)![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/HAN-Loss.png)![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%202/Plots/HAN-d2-Accuracy.png)![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%202/Plots/HAN-d2-Loss.png)
 
 ## Final Accuracy on Test Data
 ### Dataset 1
@@ -96,7 +98,7 @@ As you can see in the above tables, we have done hyperparameter tuning for the f
 | **MAX_SENT_LEN**    | N/A     | N/A     | 15      |
 | **MAX_SENT**        | N/A     | N/A     | 143     |
 ## Time Per Epoch
-[](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/timeperepoch.png)[](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%202/Plots/timeperepoch2.png)
+![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%201/Plots/timeperepoch.png)![](https://github.com/rachit-shah/adbi-project/blob/master/Dataset%20-%202/Plots/timeperepoch2.png)
 ## Conclusion
 From our experiment, we found that while CNN had the lowest validation loss on dataset 1, the test accuracy of HAN was highest even though it had lower validation loss compared to CNN. We can see that the difference between the test accuracies is very less. Hence, if someone needs to train a model faster, they could choose CNN over HAN. 
 
@@ -116,23 +118,3 @@ Overall, HAN performed consistently better for both types of datasets and it als
 9.	https://arxiv.org/pdf/1506.01057v2.pdf
 10.	http://colah.github.io/posts/2015-08-Understanding-LSTMs/
 11.	https://arxiv.org/abs/1408.5882
-
-
-There are six Ipython Notebooks (3 models for each dataset) in the submission. These can be found in the folder "Ipython Notebooks". They also have respective HTML files.
-
-The dataset, GloVe Data model embeddings and final model weights are included in the following folder - "Files to be added to your drive" https://drive.google.com/drive/folders/15A2b8uNEfak_1Gfh-c85dTtOHJrfrk7h?usp=sharing
-You have to add all these files to your drive in order to run the code. You select all and add at once. This is required to run the code on google colab.
-
-Dataset can also be found on - http://mlg.ucd.ie/datasets/bbc.html
-
-2nd Dataset was imported directly from scikit-learn's dataset library. It does not need to be uploaded/added
-
-glove embeddings can also be found on - http://nlp.stanford.edu/data/glove.6B.zip
-
-Next, open any of the Ipython Notebooks through google colab (you can use the open in colab link to do so)
-
-Execute the cells as required. The colab environment has all the packages installed. The files also contain statements to add dependencies required.
-
-You can find the video, report, presentation and contributions here - https://drive.google.com/drive/folders/1heicqQYsABXzKG3KLB8uVJ117qJ_jHkm?usp=sharing
-
-We have also added a copy of weights, plots, code and architecture in separate folders for each dataset.
