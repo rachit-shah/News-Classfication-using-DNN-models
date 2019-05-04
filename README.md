@@ -1,7 +1,7 @@
 # Comparative Analysis of CNN, RNN and HAN for Text Classification with GloVe Data Model
 Capstone Project as part of the course CSC591: Algorithms for Data-Guided Business Intelligence
 
-Team Members:
+**Team Members:**
 
 - Rachit Shah (rshah25)
 
@@ -36,13 +36,13 @@ We will use a standard solution framework typically used in NLP problems namely,
 
 ## Hyperparameter Tuning
 As you can see in the above tables, we have done hyperparameter tuning for the following parameters:
-1)	Embedding Layer Trainable – Since we are using the Glove embedding layer which has pre-trained weights on a different dataset, we have the option to either freeze the pre-trained weights or allow the weights to be retrained in the training process. From the results of our tuning, we can see that for all of our models, retraining the weights resulted in a better validation loss (lower). 
-2)	Embedding Dimensions – We had different dimensions of the Glove embedding model pre-trained on the Wikipedia corpus namely 50d,100d,200d and 300d. Higher dimensions will lengthen the training time but also provide a complex model. From our tuning, we found that only RNN had better results with 200d, while CNN and HAN performed better with 300d. 
-3)	Dropout – We used a variety of different dropout rates like 0.2,0.3,0.4 and 0.5 to reduce overfitting of our trained model. From our tuning process, we found CNN needed 0.4 dropout while RNN and HAN needed 0.3 dropout for best results. 
-4)	Bidirectional LSTM or Unidirectional LSTM (for RNN) – While unidirectional LSTM only considers the past input, bidirectional layer considers both the past and future inputs. While this may help uncover the context better, it will also make the model complex. From our results we found that unidirectional LSTM performed better on RNN while bidirectional performed better on RNN. 
-5)	MAX_SEQUENCE_LENGTH – This parameter is used while generating the final input for CNN and RNN using tokenizer word_index  and embedding index. It is essentially the input dimension (i.e, the number of words it will consider for each article). It will pad the articles which has less words and cut the articles which has more words. We generated a boxplot to visualize the outliers and the 97th percentile of sequence length for all articles. This was around 500.
-6)	MAX_SENTENCES – This parameter along with MAX_SENT_LENGTH determines the final input dimension for HAN model using tokenizer word_index and embedding index. Using a similar method to find the 97th percentile before, we found that the optimal number of sentences for each article was 50 for dataset 1 and 143 for dataset 2.
-7)	MAX_SENT_LENGTH – Similar to MAX_SENTENCES, this parameter considers the maximum word length to take for each sentence in each article. This was found to be 50 for dataset 1 and 15 for dataset 2.
+1)	**Embedding Layer Trainable**  – Since we are using the Glove embedding layer which has pre-trained weights on a different dataset, we have the option to either freeze the pre-trained weights or allow the weights to be retrained in the training process. From the results of our tuning, we can see that for all of our models, retraining the weights resulted in a better validation loss (lower). 
+2)	**Embedding Dimensions** – We had different dimensions of the Glove embedding model pre-trained on the Wikipedia corpus namely 50d,100d,200d and 300d. Higher dimensions will lengthen the training time but also provide a complex model. From our tuning, we found that only RNN had better results with 200d, while CNN and HAN performed better with 300d. 
+3)	**Dropout** – We used a variety of different dropout rates like 0.2,0.3,0.4 and 0.5 to reduce overfitting of our trained model. From our tuning process, we found CNN needed 0.4 dropout while RNN and HAN needed 0.3 dropout for best results. 
+4)	**Bidirectional LSTM or Unidirectional LSTM (for RNN)** – While unidirectional LSTM only considers the past input, bidirectional layer considers both the past and future inputs. While this may help uncover the context better, it will also make the model complex. From our results we found that unidirectional LSTM performed better on RNN while bidirectional performed better on RNN. 
+5)	**MAX_SEQUENCE_LENGTH (for CNN and RNN)** – This parameter is used while generating the final input for CNN and RNN using tokenizer word_index  and embedding index. It is essentially the input dimension (i.e, the number of words it will consider for each article). It will pad the articles which has less words and cut the articles which has more words. We generated a boxplot to visualize the outliers and the 97th percentile of sequence length for all articles. This was around 500.
+6)	**MAX_SENTENCES (for HAN)** – This parameter along with MAX_SENT_LENGTH determines the final input dimension for HAN model using tokenizer word_index and embedding index. Using a similar method to find the 97th percentile before, we found that the optimal number of sentences for each article was 50 for dataset 1 and 143 for dataset 2.
+7)	**MAX_SENT_LENGTH (for HAN)** – Similar to MAX_SENTENCES, this parameter considers the maximum word length to take for each sentence in each article. This was found to be 50 for dataset 1 and 15 for dataset 2.
 
 ### CNN
 | Embedding Trainable | Embedding Dim | Dropout | Validation Loss |
@@ -112,8 +112,8 @@ Overall, HAN performed consistently better for both types of datasets and it als
 3.	https://blog.keras.io/using-pre-trained-word-embeddings-in-a-keras-model.html
 4.	https://towardsdatascience.com/multi-class-text-classification-with-lstm-1590bee1bd17
 5.	https://medium.com/jatana/report-on-text-classification-using-cnn-rnn-han-f0e887214d5f
-6.	http://www.wildml.com/2015/11/understanding-convolutional-neural-netwo rks-for-nlp/
-7.	https://machinelearningmastery.com/cnn-long-short-term-memory-networ ks/
+6.	http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
+7.	https://machinelearningmastery.com/cnn-long-short-term-memory-networks/
 8.	https://www.cs.cmu.edu/~diyiy/docs/naacl16.pdf
 9.	https://arxiv.org/pdf/1506.01057v2.pdf
 10.	http://colah.github.io/posts/2015-08-Understanding-LSTMs/
